@@ -9,10 +9,12 @@ public class Pessoa {
 
 
 	public int idade;
+	public String nome;
 
 
-	public Pessoa(int idade, char sexo) {
+	public Pessoa(int idade, String nome) {
 		this.idade = idade;
+		this.nome = nome;
 	}
 
 

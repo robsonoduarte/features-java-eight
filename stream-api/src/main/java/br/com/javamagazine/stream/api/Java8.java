@@ -13,14 +13,13 @@ public class Java8 {
 	}
 
 
+
 	public static List<Pessoa> getAsCincoPrimeirasPessoasMaiorDeIdade(List<Pessoa> pessoas){
 		return pessoas.stream()
 				.filter(p -> p.idade >= 18)
 				.peek(p -> System.out.println(p))
 				.limit(5)
 				.collect(toList());
-
 	}
-
 
 }

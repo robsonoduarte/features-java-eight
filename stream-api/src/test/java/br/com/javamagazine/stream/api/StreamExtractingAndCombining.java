@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import org.junit.Test;
 
-public class ExtractingSubstreamsCombiningStreams {
+public class StreamExtractingAndCombining {
 
 	@Test
 	public void test() {						

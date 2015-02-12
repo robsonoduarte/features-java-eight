@@ -21,6 +21,8 @@ public class StreamExtractingAndCombining {
 			error.printStackTrace();
 		}
 	}
+
+	
 	
 	@Test
 	public void test2() {
@@ -32,9 +34,17 @@ public class StreamExtractingAndCombining {
 		
 	}
 	
+	
+	
+	
 	@Test
 	public void test3() {
 				
+	}
+	
+	@Test
+	public void test4() {
+		
 	}
 	
 }

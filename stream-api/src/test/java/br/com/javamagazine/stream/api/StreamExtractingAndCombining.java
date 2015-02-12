@@ -42,9 +42,6 @@ public class StreamExtractingAndCombining {
 				
 	}
 	
-	@Test
-	public void test4() {
-		
-	}
+
 	
 }

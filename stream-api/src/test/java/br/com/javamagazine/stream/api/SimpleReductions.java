@@ -12,6 +12,7 @@ import org.junit.Test;
 public class SimpleReductions extends BasicTest{
 
 
+	
 	@Test
 	public void test() {
 		
@@ -23,6 +24,7 @@ public class SimpleReductions extends BasicTest{
 		assertThat(pessoa.get().idade, equalTo(88));
 		
 	}
+	
 	
 	
 	@Test

@@ -14,7 +14,7 @@ public class SimpleReductions extends BasicTest{
 
 	
 	@Test
-	public void test() {
+	public void tes1() {
 		
 		List<Pessoa> pessoas = getPessoas();
 		
@@ -28,7 +28,7 @@ public class SimpleReductions extends BasicTest{
 	
 	
 	@Test
-	public void test1() {
+	public void test2() {
 		
 		List<Pessoa> pessoas = getPessoas();
 		
@@ -36,6 +36,21 @@ public class SimpleReductions extends BasicTest{
 				pessoas.stream().min(Comparator.comparing(p -> p.idade));
 		
 		assertThat(pessoa.get().idade, equalTo(1));	
+	}
+	
+	
+	@Test
+	public void test1() {
+		
+		List<Pessoa> pessoas = getPessoas();
+		
+		
+		Optional<Pessoa> pessoa = 
+				pessoas.stream().filter(p -> p.nome.startsWith("A")).findFirst();
+		
+		
+		assertThat(pessoa.get().nome, equalTo("Antonio"));
+		
 	}
 
 	

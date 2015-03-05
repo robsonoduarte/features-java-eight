@@ -9,7 +9,7 @@ public class Java7Test extends BasicTest{
 
 	@Test
 	public void test() {
-		 assertEquals(9, getNumeroDePessoasMaiorDeIdade(getPessoas()));
+		 assertEquals(9, getNumeroDePessoasMaiorDeIdade(pessoas));
 	}
 
 }

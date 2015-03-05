@@ -15,7 +15,7 @@ public class Java8Test extends BasicTest{
 
 	@Test
 	public void test() {
-		long numeroDePessoasMaiorDeIdade = getNumeroDePessoasMaiorDeIdade(getPessoas());
+		long numeroDePessoasMaiorDeIdade = getNumeroDePessoasMaiorDeIdade(pessoas);
 		assertThat(numeroDePessoasMaiorDeIdade, equalTo(9l));
 	}
 
@@ -25,9 +25,9 @@ public class Java8Test extends BasicTest{
 	@Test
 	public void test2() {
 
-		List<Pessoa> pessoas = getAsCincoPrimeirasPessoasMaiorDeIdade(getPessoas());
+		List<Pessoa> pessoasMaioresDeIdade = getAsCincoPrimeirasPessoasMaiorDeIdade(pessoas);
 
-		assertThat(pessoas,hasItems(
+		assertThat(pessoasMaioresDeIdade,hasItems(
 						new Pessoa(18,"Pedro"),
 						new Pessoa(20,"Antonio"),
 						new Pessoa(22,"Ana"),

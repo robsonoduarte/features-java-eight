@@ -14,8 +14,6 @@ public class StreamTransformationTest extends BasicTest {
 	@Test
 	public void test() {
 
-		List<Pessoa> pessoas = getPessoas();
-
 		List<String> nomes =
 				pessoas.stream()
 					.map(p -> p.nome = p.nome.toUpperCase())
@@ -25,7 +23,6 @@ public class StreamTransformationTest extends BasicTest {
 			assertThat(isAllUpperCase(nome), not(false));
 		}
 	}
-
 
 	
 }

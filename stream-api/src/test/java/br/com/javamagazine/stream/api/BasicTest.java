@@ -4,13 +4,31 @@ import static java.util.Arrays.asList;
 
 import java.util.List;
 
+import org.junit.Before;
+
 public class BasicTest {
 
 
+	protected List<Pessoa> pessoas;
+	
+	
+	@Before
+	public void setUp() throws Exception {
+		pessoas = getPessoas();
+	}
 
 
+	
+	
+	
+	
+	
+	
+	
+	
 
-	protected List<Pessoa> getPessoas() {
+	
+	private List<Pessoa> getPessoas() {
 		return asList(
 				new Pessoa(18,"Pedro"),
 	 			new Pessoa(10,"Maria"),

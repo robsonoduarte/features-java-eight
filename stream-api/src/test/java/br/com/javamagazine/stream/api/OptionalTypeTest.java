@@ -88,11 +88,6 @@ public class OptionalTypeTest extends BasicTest{
 		Pessoa pessoa = opitional.orElse(new Pessoa(1, "Bebe"));
 		
 		assertThat(pessoa.getIdade(), equalTo(1));
-	
 		
 	}
-
-	
-	
-	
 }

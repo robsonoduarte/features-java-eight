@@ -20,32 +20,20 @@ public class Pessoa {
 
 
 
+	public int getIdade() {
+		return idade;
+	}
 
 
 
+	public String getNome() {
+		return nome;
+	}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
 
 
 	@Override

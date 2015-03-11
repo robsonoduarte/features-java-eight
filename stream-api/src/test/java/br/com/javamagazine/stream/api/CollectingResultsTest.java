@@ -48,7 +48,7 @@ public class CollectingResultsTest extends BasicTest{
 	
 	
 	@Test
-	public void test4() {
+	public void testToMap() {
 		
 		Map<Integer, Pessoa> map = 
 				pessoas.stream().filter(p -> p.idade <18 ).collect(Collectors.toMap(p -> p.getIdade(), p -> p ));

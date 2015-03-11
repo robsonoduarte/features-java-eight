@@ -15,7 +15,7 @@ public class CollectingResultsTest extends BasicTest{
 
 		
 	@Test
-	public void test() {
+	public void testToArray() {
 				
 		Pessoa[] pessoasMaiorDeIdade = 
 				pessoas.stream().filter(p -> p.idade >=18 ).toArray(Pessoa[]::new);
@@ -24,9 +24,10 @@ public class CollectingResultsTest extends BasicTest{
 		
 	}
 	
+
 	
 	@Test
-	public void test2() {
+	public void testToSet() {
 		
 		Set<Pessoa> pessoasMaiorDeIdade = 
 				pessoas.stream().filter(p -> p.idade >=18 ).collect(Collectors.toSet());
@@ -35,8 +36,9 @@ public class CollectingResultsTest extends BasicTest{
 		
 	}
 	
+	
 	@Test
-	public void test3() {
+	public void testToCollection() {
 	
 		ArrayList<Pessoa> pessoasMaiorDeIdade = 
 						pessoas.stream().filter(p -> p.idade >=18 ).collect(Collectors.toCollection(ArrayList::new));

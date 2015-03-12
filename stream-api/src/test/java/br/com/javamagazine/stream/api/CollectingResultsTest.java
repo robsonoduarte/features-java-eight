@@ -1,6 +1,7 @@
 package br.com.javamagazine.stream.api;
 
 import static org.hamcrest.Matchers.arrayWithSize;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertThat;
 
@@ -20,8 +21,7 @@ public class CollectingResultsTest extends BasicTest{
 		Pessoa[] pessoasMaiorDeIdade = 
 				pessoas.stream().filter(p -> p.idade >=18 ).toArray(Pessoa[]::new);
 		
-		assertThat(pessoasMaiorDeIdade, arrayWithSize(9));
-		
+		assertThat(pessoasMaiorDeIdade, arrayWithSize(9));	
 	}
 	
 
@@ -33,7 +33,6 @@ public class CollectingResultsTest extends BasicTest{
 				pessoas.stream().filter(p -> p.idade >=18 ).collect(Collectors.toSet());
 		
 		assertThat(pessoasMaiorDeIdade, hasSize(9));
-		
 	}
 	
 	
@@ -47,15 +46,17 @@ public class CollectingResultsTest extends BasicTest{
 	}
 	
 	
+	
+	
 	@Test
 	public void testToMap() {
 		
-		Map<Integer, Pessoa> map = 
-				pessoas.stream().filter(p -> p.idade <18 ).collect(Collectors.toMap(p -> p.getIdade(), p -> p ));
+		Map<Integer, Pessoa> mapSomenteCriancas = 
+				pessoas.stream().filter(p -> p.idade <12 ).collect(Collectors.toMap(Pessoa::getIdade, p -> p));
 		
-		System.out.println(map);
-		
+		assertThat(mapSomenteCriancas.size(), equalTo(5));
 	}
+	
 	
 	
 }

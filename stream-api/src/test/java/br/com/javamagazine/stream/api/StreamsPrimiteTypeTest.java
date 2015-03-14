@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class PrimiteTypeStreamsTest {
+public class StreamsPrimiteTypeTest {
 
 	@Test
 	public void test() {

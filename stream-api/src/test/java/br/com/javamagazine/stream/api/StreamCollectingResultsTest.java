@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 import org.junit.Test;
 
-public class CollectingResultsTest extends BasicTest{
+public class StreamCollectingResultsTest extends BasicTest{
 
 		
 	@Test

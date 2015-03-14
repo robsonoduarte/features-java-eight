@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Test;
 
-public class ParallelStreamsTest extends BasicTest{
+public class StreamsParallelTest extends BasicTest{
 
 	
 	

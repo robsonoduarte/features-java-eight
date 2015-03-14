@@ -12,7 +12,7 @@ public class StreamCretionTest {
 
 
 	@Test
-	public void test1() {
+	public void testOfMethodWithVarags() {
 
 		Stream<String> stream = Stream.of("Pessoa", "Cachorro", "Gato");
 
@@ -21,7 +21,26 @@ public class StreamCretionTest {
 
 
 	@Test
-	public void test2() {
+	public void testOfMethodWithArray() {
+		
+		Stream<String> stream = Stream.of(new String[]{"Pessoa", "Cachorro", "Gato"});
+		
+		assertThat(stream.count(), equalTo(1l));
+	}
+	
+	
+	@Test
+	public void testArraysStreamMethodWithRange() {
+
+		Stream<String> stream = Arrays.stream(new String[]{"Pessoa", "Cachorro", "Gato"}, 1, 2);
+
+		assertThat(stream.count(), equalTo(1l));
+	}
+	
+	
+	
+	@Test
+	public void testGerenateMethod() {
 
 		Stream<Double> stream = Stream.generate(Math::random).limit(10);
 
@@ -30,7 +49,7 @@ public class StreamCretionTest {
 
 
 	@Test
-	public void test3() {
+	public void testIterateMethod() {
 
 		Stream<Integer> stream =  Stream.iterate(1, n -> n + 1).limit(10);
 
@@ -41,13 +60,7 @@ public class StreamCretionTest {
 
 
 
-	@Test
-	public void test4() {
 
-		Stream<String> stream = Arrays.stream(new String[]{"Pessoa", "Cachorro", "Gato"}, 1, 2);
-
-		assertThat(stream.count(), equalTo(1l));
-	}
 
 
 

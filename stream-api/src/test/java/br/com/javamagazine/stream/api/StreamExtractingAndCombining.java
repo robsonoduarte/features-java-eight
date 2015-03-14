@@ -16,8 +16,9 @@ import org.junit.Test;
 
 public class StreamExtractingAndCombining extends BasicTest{
 
+	
 	@Test
-	public void test() {						
+	public void testInfinitGenerationStream() {						
 		try {
 			Stream.generate(Math::random).collect(toList());
 			fail();
@@ -25,11 +26,22 @@ public class StreamExtractingAndCombining extends BasicTest{
 			error.printStackTrace();
 		}
 	}
-
+	
 	
 	@Test
-	public void test2() throws IOException {
+	public void testLimitedGenerationStream() {						
+
+		List<Double> list = 
+				Stream.generate(Math::random).limit(10).collect(toList());
+
+		assertThat(list, hasSize(10));
 		
+	}
+
+	
+	
+	@Test
+	public void testShipMehtod() throws IOException {
 		
 		Path path = Paths.get("src/test/resources/file.txt");
 		

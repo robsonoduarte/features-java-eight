@@ -61,9 +61,9 @@ public class StreamsParallelTest extends BasicTest{
 		pessoas = generateBigSizeList();
 		
 		pessoas.stream()
-		.parallel()
-		.forEach( p -> {
-			if(p.getIdade() >= 60){
+			.parallel()
+			.forEach( p -> {
+				if(p.getIdade() >= 60){
 				atomicNumeroDeIdodos.getAndAdd(1);
 			}
 		});

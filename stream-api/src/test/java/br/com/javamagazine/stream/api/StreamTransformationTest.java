@@ -12,7 +12,7 @@ import org.junit.Test;
 public class StreamTransformationTest extends BasicTest {
 
 	@Test
-	public void test() {
+	public void testMapMethodForStreamTransformation() {
 
 		List<String> nomes =
 				pessoas.stream()

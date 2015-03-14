@@ -37,6 +37,7 @@ public class PerformanceParallelStreamsTest extends BasicTest{
 		List<Pessoa> idosos = 
 				
 				pessoas.stream()
+				/*.unordered()*/
 				.parallel()
 				.filter(p -> p.getIdade() >= 60)
 				.collect(toList());
@@ -59,7 +60,7 @@ public class PerformanceParallelStreamsTest extends BasicTest{
 
 
 	@Test
-	public void testPerformaceRunInSequentialMode() {
+	public void testPerformanceRunInSequentialMode() {
 		
 		pessoas = generateVeryBigSizeList();
 		
@@ -90,7 +91,7 @@ public class PerformanceParallelStreamsTest extends BasicTest{
 	private List<Pessoa> generateVeryBigSizeList() {		
 		List<Pessoa> pessoas = new ArrayList<>();
 		
-		for (int i = 0; i < 60000000; i++) {
+		for (int i = 0; i < 20000000; i++) {
 			pessoas.add(new Pessoa(i, "nome"));
 		}
 		

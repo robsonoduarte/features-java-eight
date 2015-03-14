@@ -10,10 +10,9 @@ import org.junit.Test;
 
 public class SimpleReductionsTest extends BasicTest{
 
-
 	
 	@Test
-	public void test1() {
+	public void testMaxMethod() {
 		
 		Optional<Pessoa> pessoaMaisVelha = 
 				pessoas.stream().max(Comparator.comparing(p -> p.idade));
@@ -21,10 +20,10 @@ public class SimpleReductionsTest extends BasicTest{
 		assertThat(pessoaMaisVelha.get().idade, equalTo(88));	
 	}
 	
-	
+		
 	
 	@Test
-	public void test2() {
+	public void testMinMehtod() {
 		
 		Optional<Pessoa> pessoaMaisNova = 
 				pessoas.stream().min(Comparator.comparing(p -> p.idade));
@@ -34,9 +33,8 @@ public class SimpleReductionsTest extends BasicTest{
 	
 	
 	
-	
 	@Test
-	public void test3() {
+	public void testFindFirstMethod() {
 				
 		Optional<Pessoa> pessoa = 
 				pessoas.stream().filter(p -> p.nome.startsWith("A")).findFirst();
@@ -44,5 +42,4 @@ public class SimpleReductionsTest extends BasicTest{
 		assertThat(pessoa.get().nome, equalTo("Antonio"));
 	}
 
-	
 }

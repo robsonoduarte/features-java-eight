@@ -14,18 +14,18 @@ public class OptionalTypeTest extends BasicTest{
 	
 	
 	@Test(expected=NoSuchElementException.class)
-	public void test1() {
+	public void testThrowNoSuchElementExceptionWhenHaventElement() {
 		
 		Optional<Pessoa> primeiraPessoa = 
 				pessoas.stream().filter(p -> p.nome.startsWith("W")).findFirst();
 	
-		primeiraPessoa.get();
+		primeiraPessoa.get();			
 	}
 	
 
 	
 	@Test
-	public void test2() {
+	public void testIsPressentMethod() {
 				
 		Optional<Pessoa> primeiraPessoa = 
 				pessoas.stream().filter(p -> p.nome.startsWith("A")).findFirst();
@@ -36,7 +36,7 @@ public class OptionalTypeTest extends BasicTest{
 	
 	
 	@Test
-	public void test3() {
+	public void testIfPresentMethod() {
 		
 		
 		Optional<Pessoa> primeiroMenorDeIdade = 
@@ -51,7 +51,7 @@ public class OptionalTypeTest extends BasicTest{
 	
 	
 	@Test
-	public void test4() {
+	public void testIfPresenteMethodWihtMethodReference() {
 		
 		
 		Optional<Pessoa> primeiroMenorDeIdade = 
@@ -65,21 +65,20 @@ public class OptionalTypeTest extends BasicTest{
 	
 	
 	@Test
-	public void test5() {
+	public void testMapMethod() {
 		
 		Optional<Pessoa> primeiroMenorDeIdade = 
 				pessoas.stream().filter(p -> p.idade < 18).findFirst();
 		
 		Optional<Boolean> isRemovido = primeiroMenorDeIdade.map(pessoas::remove);
 		
-		assertThat(isRemovido.get(), equalTo(true));
-		
+		assertThat(isRemovido.get(), equalTo(true));		
 	}
 	
 	
 	
 	@Test
-	public void test6() {
+	public void testOrElseMethod() {
 		
 		Optional<Pessoa> opitional = 
 				pessoas.stream().filter(p -> p.idade <= 1).findFirst();

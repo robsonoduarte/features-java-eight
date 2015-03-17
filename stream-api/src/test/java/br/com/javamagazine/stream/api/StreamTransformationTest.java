@@ -23,6 +23,19 @@ public class StreamTransformationTest extends BasicTest {
 			assertThat(isAllUpperCase(nome), not(false));
 		}
 	}
+	
+	@Test
+	public void testFlatMapMethodForStreamTransformation() {
+		
+		/*List<String> nomes =
+				pessoas.stream()
+				.map(p -> p.nome = p.nome.toUpperCase())
+				.collect(toList());
+		
+		for (String nome : nomes) {
+			assertThat(isAllUpperCase(nome), not(false));
+		}*/
+	}
 
 	
 }

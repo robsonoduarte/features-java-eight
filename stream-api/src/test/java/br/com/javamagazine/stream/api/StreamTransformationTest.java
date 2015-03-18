@@ -23,19 +23,18 @@ public class StreamTransformationTest extends BasicTest {
 			assertThat(isAllUpperCase(nome), not(false));
 		}
 	}
+
 	
 	@Test
 	public void testFlatMapMethodForStreamTransformation() {
 		
-		/*List<String> nomes =
-				pessoas.stream()
-				.map(p -> p.nome = p.nome.toUpperCase())
-				.collect(toList());
-		
-		for (String nome : nomes) {
-			assertThat(isAllUpperCase(nome), not(false));
-		}*/
+		//http://www.journaldev.com/2774/java-8-stream-api-example-tutorial
+		//http://pt.slideshare.net/chris.e.richardson/map-flatmap-and-reduce-are-your-new-best-friends-simpler-collections-concurrency-and-big-data-jax-jax2014
+/*		pessoas.stream()
+			.flatMap(p -> p.nome = p.nome.toUpperCase())
+			.collect(toList());*/
 	}
 
+	
 	
 }

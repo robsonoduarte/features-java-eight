@@ -27,6 +27,9 @@ public class StreamTransformationTest extends BasicTest {
 	
 	@Test
 	public void testFlatMapMethodForStreamTransformation() {
+	
+		//http://www.adam-bien.com/roller/abien/entry/java_8_flatmap_example
+		
 		
 		//http://www.journaldev.com/2774/java-8-stream-api-example-tutorial
 		//http://pt.slideshare.net/chris.e.richardson/map-flatmap-and-reduce-are-your-new-best-friends-simpler-collections-concurrency-and-big-data-jax-jax2014
@@ -35,6 +38,9 @@ public class StreamTransformationTest extends BasicTest {
 			.collect(toList());*/
 	}
 
+	
+
+/*	public Stream<String> */
 	
 	
 }

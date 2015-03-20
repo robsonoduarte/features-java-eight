@@ -84,7 +84,7 @@ public class OptionalTypeTest extends BasicTest{
 				pessoas.stream().filter(p -> p.idade <= 1).findFirst();
 		
 		// caso não encontre... retorne uma pessoa com um ano de idade.
-		Pessoa pessoa = opitional.orElse(new Pessoa(1, "Bebe"));
+		Pessoa pessoa = opitional.orElse(new Pessoa(1, "Bebe", null));
 		
 		assertThat(pessoa.getIdade(), equalTo(1));
 		

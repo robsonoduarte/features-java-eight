@@ -2,6 +2,7 @@ package br.com.javamagazine.stream.api;
 
 import static br.com.javamagazine.stream.api.Java8.getAsCincoPrimeirasPessoasMaiorDeIdade;
 import static br.com.javamagazine.stream.api.Java8.getNumeroDePessoasMaiorDeIdade;
+import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItems;
 import static org.junit.Assert.assertThat;
@@ -21,6 +22,7 @@ public class Java8Test extends BasicTest{
 
 
 
+	
 
 	@Test
 	public void test2() {
@@ -28,12 +30,14 @@ public class Java8Test extends BasicTest{
 		List<Pessoa> pessoasMaioresDeIdade = getAsCincoPrimeirasPessoasMaiorDeIdade(pessoas);
 
 		assertThat(pessoasMaioresDeIdade,hasItems(
-						new Pessoa(18,"Pedro"),
-						new Pessoa(20,"Antonio"),
-						new Pessoa(22,"Ana"),
-						new Pessoa(50,"Guilherme"),
-						new Pessoa(88,"Alexandre")
-					)
-			);
+					new Pessoa(18,"Pedro", asList("Cimena", "Shopping")),
+					new Pessoa(20,"Antonio", asList("Cimena", "Dançar")),
+					new Pessoa(22,"Ana", asList("Namorar", "Dançar")),
+					new Pessoa(50,"Guilherme", asList("Pescar", "Filhos")),
+					new Pessoa(88,"Alexandre", asList("Domino", "Baralho"))
+				));
+		
+		
+
 	}
 }

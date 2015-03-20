@@ -25,7 +25,7 @@ public class StreamCretionTest {
 		
 		Stream<String> stream = Stream.of(new String[]{"Pessoa", "Cachorro", "Gato"});
 		
-		assertThat(stream.count(), equalTo(1l));
+		assertThat(stream.count(), equalTo(3l));
 	}
 	
 	

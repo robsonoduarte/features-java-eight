@@ -79,10 +79,8 @@ public class StreamsParallelTest extends BasicTest{
 		List<Pessoa> pessoas = new ArrayList<>();
 		
 		for (int i = 0; i < 1000000; i++) {
-			pessoas.add(new Pessoa(i, "nome"));
+			pessoas.add(new Pessoa(i, "nome", null));
 		}	
 		return pessoas;
 	}
-
-	
 }

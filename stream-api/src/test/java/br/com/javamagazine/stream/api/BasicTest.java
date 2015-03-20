@@ -25,25 +25,22 @@ public class BasicTest {
 	
 	
 	
-	
-	
 
-	
 	private List<Pessoa> getPessoas() {
 		return new ArrayList<>(asList(
-						new Pessoa(18,"Pedro"),
-			 			new Pessoa(10,"Maria"),
-			 			new Pessoa(11,"Joao"),
-			 			new Pessoa(20,"Antonio"),
-			 			new Pessoa(22,"Ana"),
-			 			new Pessoa(50,"Guilherme"),
-			 			new Pessoa(12,"Gustavo"),
-			 			new Pessoa(88,"Alexandre"),
-			 			new Pessoa(26,"Peterson"),
-			 			new Pessoa(38,"Daniel"),
-			 			new Pessoa(29,"Giovana"),
-			 			new Pessoa(39,"Sidney"),
-			 			new Pessoa(9,"Everaldo"),
+						new Pessoa(18,"Pedro", asList("Cimena", "Shopping")),
+			 			new Pessoa(10,"Maria", asList("Cartoon", "Brincar")),
+			 			new Pessoa(11,"Joao", asList("Videogame", "Bicicleta")),
+			 			new Pessoa(20,"Antonio", asList("Cimena", "Dançar")),
+			 			new Pessoa(22,"Ana", asList("Namorar", "Dançar")),
+			 			new Pessoa(50,"Guilherme", asList("Pescar", "Filhos")),
+			 			new Pessoa(12,"Gustavo", asList("Videogame", "Bicicleta")),
+			 			new Pessoa(88,"Alexandre", asList("Domino", "Baralho")),
+			 			new Pessoa(26,"Peterson", asList("Cimena", "Dançar")),
+			 			new Pessoa(38,"Daniel", asList("Estudar", "TV")),
+			 			new Pessoa(29,"Giovana", asList("Namorar", "Dançar")),
+			 			new Pessoa(39,"Sidney", asList("Pescar", "Cerveja")),
+			 			new Pessoa(9,"Everaldo", asList("Brincar")),
 			 			new Pessoa(1,"Julio"),
 			 			new Pessoa(3,"Marco"))
 				);

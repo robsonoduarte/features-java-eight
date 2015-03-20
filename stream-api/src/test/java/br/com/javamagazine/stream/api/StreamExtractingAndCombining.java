@@ -55,7 +55,7 @@ public class StreamExtractingAndCombining extends BasicTest{
 	
 	
 	@Test
-	public void test3() {
+	public void testConatMehtod() {
 		
 		pessoas.stream().filter(p -> p.idade < 10 || p.idade > 20).forEach(System.out::println);
 		

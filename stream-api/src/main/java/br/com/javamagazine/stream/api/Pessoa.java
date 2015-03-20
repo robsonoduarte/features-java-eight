@@ -5,13 +5,24 @@ import static org.apache.commons.lang3.builder.HashCodeBuilder.reflectionHashCod
 import static org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString;
 import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pessoa {
 
 
 	public int idade;
 	public String nome;
+	private List<String> hobbys;
+	
 
-
+	public Pessoa(int idade, String nome, List<String> hobbys) {
+		this.idade = idade;
+		this.nome = nome;
+		this.hobbys = hobbys;
+	}
+	
+	
 	public Pessoa(int idade, String nome) {
 		this.idade = idade;
 		this.nome = nome;
@@ -25,16 +36,19 @@ public class Pessoa {
 	}
 
 
-
 	public String getNome() {
 		return nome;
 	}
 
 
+	public List<String> getHobbys() {
+		if(hobbys == null){
+			return new ArrayList<>();
+		}
+		return hobbys;
+	}
 
 	
-	
-
 
 	@Override
 	public int hashCode() {
@@ -53,5 +67,14 @@ public class Pessoa {
 	public String toString() {
 		return reflectionToString(this, SHORT_PREFIX_STYLE);
 	}
+
+
+
+
+	
+
+
+
+
 
 }

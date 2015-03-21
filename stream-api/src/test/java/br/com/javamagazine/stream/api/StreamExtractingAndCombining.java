@@ -1,6 +1,8 @@
 package br.com.javamagazine.stream.api;
 
 import static java.util.stream.Collectors.toList;
+import static java.util.stream.Stream.concat;
+import static java.util.stream.Stream.of;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
@@ -57,9 +59,10 @@ public class StreamExtractingAndCombining extends BasicTest{
 	@Test
 	public void testConatMehtod() {
 		
-		pessoas.stream().filter(p -> p.idade < 10 || p.idade > 20).forEach(System.out::println);
+		List<Integer> list = 
+				concat(of(1, 2, 3), concat(of(3, 4, 5), of(6, 7, 8))).collect(toList());
 		
-		/*Stream.concat(a, b)*/
+		assertThat(list, hasSize(9));
 	}
 	
 

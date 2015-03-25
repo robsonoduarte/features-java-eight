@@ -15,15 +15,28 @@ public class StreamsParallelTest extends BaseTest{
 	
 	
 	@Test
-	public void testExecutionPipeLineInParallel() {
+	public void testExecutionPipeLineInParallelWithParallelStreamMethod() {
 		
 		Long numeroDePessoasIdosas = 
-				pessoas.stream()
-					.parallel()
+				pessoas.parallelStream()
 					.filter(p -> p.getIdade() > 65)
 					.count();
 			
 		assertThat(numeroDePessoasIdosas, equalTo(1L));
+		
+	}
+	
+	@Test
+	public void testExecutionPipeLineInParallelWithParallelItermedieteOperation() {
+		
+		Long numeroDePessoasIdosas = 
+				pessoas.stream()
+				 	.parallel()
+				 	.filter(p -> p.getIdade() > 65)
+				 	.count();
+		
+		assertThat(numeroDePessoasIdosas, equalTo(1L));
+		
 	}
 	
 	

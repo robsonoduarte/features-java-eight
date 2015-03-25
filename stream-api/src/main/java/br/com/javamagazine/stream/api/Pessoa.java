@@ -68,13 +68,4 @@ public class Pessoa {
 		return reflectionToString(this, SHORT_PREFIX_STYLE);
 	}
 
-
-
-
-	
-
-
-
-
-
 }

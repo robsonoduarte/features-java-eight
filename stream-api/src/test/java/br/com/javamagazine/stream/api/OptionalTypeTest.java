@@ -9,7 +9,7 @@ import java.util.Optional;
 
 import org.junit.Test;
 
-public class OptionalTypeTest extends BasicTest{
+public class OptionalTypeTest extends BaseTest{
 
 	
 	

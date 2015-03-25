@@ -11,7 +11,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class Java8Test extends BasicTest{
+public class Java8Test extends BaseTest{
 
 
 	@Test

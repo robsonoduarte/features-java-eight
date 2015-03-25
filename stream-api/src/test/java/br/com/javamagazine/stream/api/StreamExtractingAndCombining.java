@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 
 import org.junit.Test;
 
-public class StreamExtractingAndCombining extends BasicTest{
+public class StreamExtractingAndCombining extends BaseTest{
 
 	
 	@Test

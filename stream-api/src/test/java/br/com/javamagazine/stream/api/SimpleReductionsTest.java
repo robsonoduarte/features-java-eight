@@ -8,7 +8,7 @@ import java.util.Optional;
 
 import org.junit.Test;
 
-public class SimpleReductionsTest extends BasicTest{
+public class SimpleReductionsTest extends BaseTest{
 
 	
 	@Test

@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class Java7Test extends BasicTest{
+public class Java7Test extends BaseTest{
 
 	@Test
 	public void test() {

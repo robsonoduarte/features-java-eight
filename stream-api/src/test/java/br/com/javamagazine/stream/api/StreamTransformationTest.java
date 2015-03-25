@@ -12,7 +12,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class StreamTransformationTest extends BasicTest {
+public class StreamTransformationTest extends BaseTest {
 
 	@Test
 	public void testMapMethodForStreamTransformation() {

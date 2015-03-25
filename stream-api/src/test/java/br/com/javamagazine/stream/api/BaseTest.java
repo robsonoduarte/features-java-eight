@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.junit.Before;
 
-public class BasicTest {
+public class BaseTest {
 
 
 	protected List<Pessoa> pessoas;

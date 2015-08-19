@@ -13,7 +13,7 @@ public class FilePath {
 	
 
 		
-		// without lambda
+		// without lambda 
 		
 		directories = 
 			new File("/").listFiles(new FileFilter() {

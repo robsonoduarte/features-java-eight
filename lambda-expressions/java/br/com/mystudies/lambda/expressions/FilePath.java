@@ -34,7 +34,7 @@ public class FilePath {
 		
 		
 		
-		// with lambda	
+		// with lambda	 
 		directories = 
 			new File("/")
 				.listFiles(f -> {

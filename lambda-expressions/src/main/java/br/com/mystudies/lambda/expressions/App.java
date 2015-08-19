@@ -15,6 +15,8 @@ public class App {
 		Arrays.sort(a, compartor());
 
 		asList(a).stream().forEach(System.out::println);
+		
+		
 
 	}
 

@@ -11,7 +11,7 @@ public class FilePath2 {
 	
 
 		
-		// without lambda
+		// without lambda 
 		
 		files =
 			new File("/teste/").list(new FilenameFilter() {			

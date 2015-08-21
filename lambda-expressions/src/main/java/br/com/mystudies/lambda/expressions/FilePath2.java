@@ -14,16 +14,16 @@ public class FilePath2 {
 
 		
 			String[] name = 
-				new File("/teste/").list( (f,n) -> {					
-					return f.isFile() ? n.contains("txt") : false ;
+				new File("/teste/").list( (f,n) -> {	
+					System.out.println(f.getAbsolutePath());
+					return n.contains("txt") ? true : false ;
 				});
+			
 			
 			
 			asList(name).stream()
 				.forEach(System.out::println);
 		
-			
-			
 			
 		
 	}

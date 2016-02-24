@@ -3,42 +3,58 @@ package br.com.mystudies.lambda.expressions;
 import static java.util.Arrays.asList;
 
 import java.io.File;
-import java.io.FilenameFilter;
+import java.nio.file.Paths;
 
 public class FilePath2 {
 
 	public static void main(String[] args) {
 
-		
-	
+		File file = temp();
 
-		
-			String[] name = 
-				new File("/teste/").list( (f,n) -> {	
-					System.out.println(f.getAbsolutePath());
-					return n.contains("txt") ? true : false ;
-				});
-			
-			
-			
-			asList(name).stream()
-				.forEach(System.out::println);
-		
-			
-		
+
+		System.out.println(file);
+
+
+		String[] name =
+			file.list((f,n) -> {
+				return f.isFile() && n.contains("txt");
+			});
+
+
+		asList(name).stream()
+		 	.forEach(System.out::println);
+
+
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	private static File temp() {
+		return Paths.get("src/test/java").getFileName().toFile();
+	}
+
+
+
+
+
+
 
 }

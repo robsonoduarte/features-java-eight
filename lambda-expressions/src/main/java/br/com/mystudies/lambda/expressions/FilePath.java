@@ -7,15 +7,13 @@ import java.io.FileFilter;
 
 public class FilePath {
 
+
 	public static void main(String[] args) {
 
 		File[] directories;
-	
 
-		
-		// without lambda 
-		
-		directories = 
+		// without lambda
+		directories =
 			new File("/").listFiles(new FileFilter() {
 				@Override
 				public boolean accept(File file) {
@@ -23,44 +21,21 @@ public class FilePath {
 				}
 		});
 
-		
-		
-		
 		print(directories);
-		
-		
 
-		
-		
-		
-		
-		// with lambda	 
-		directories = 
+		// with lambda
+		directories =
 			new File("/")
 				.listFiles(f -> {
-						return f.isDirectory();
-					});
+					return f.isDirectory();
+				});
 
-		
-		
 		print(directories);
-		
 
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 
-	
-	
-	
-	
+
 	private static void print(File[] directories) {
 		asList(directories)
 			.stream()
@@ -68,9 +43,5 @@ public class FilePath {
 				System.out.println(f.getAbsolutePath());
 			});
 	}
-
-	
-	
-	
 
 }

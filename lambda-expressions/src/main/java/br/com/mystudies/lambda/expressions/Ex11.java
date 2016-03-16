@@ -1,6 +1,6 @@
 package br.com.mystudies.lambda.expressions;
 
-public class Ex10 {
+public class Ex11 {
 
 
 

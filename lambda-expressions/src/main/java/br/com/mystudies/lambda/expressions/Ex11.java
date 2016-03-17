@@ -10,6 +10,17 @@ public class Ex11 {
 
 
 
+	interface I{
+		void f();
+	}
+
+
+
+	interface J{
+		void f();
+	}
+
+
 
 
 

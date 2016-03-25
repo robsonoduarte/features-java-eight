@@ -9,20 +9,50 @@ public class Ex11 {
 
 
 
+	
 
 	interface I{
-		void f();
+		default void f(){};
+		//void f(); // ok no compilation problems
 	}
 
 
 
 	interface J{
-		void f();
+		//default void f(){}; // compilation problems because conflict methods
+		//static void f(){};
+		void f(); 
 	}
 
 
 
 
+	
 
+
+	
+	
+	
+	class R implements I{
+		@Override
+		public void f() {
+			I.super.f();
+		}
+		
+	}
+	
+	
+	
+	
+	
+	class S extends R implements J{
+		@Override
+		public void f() {}	
+	}
+	
+	
+	
+	
+	
 
 }
